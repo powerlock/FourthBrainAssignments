@@ -1,11 +1,11 @@
-def add(x:int, y:int=100) -> int:
+def add(x, y):
     """
-    Add two numbers together.
+    Add two numbers, strings or arrays together.
 
     Args:
-        x (int): The first number.
-        y (int): The second number. Defaults to 100.
+        x: the first element
+        y: The second element.
     Returns:
-        int: The sum of the two numbers.
+        int: The sum of the two elements.
     """
     return x + y
