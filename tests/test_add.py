@@ -1,7 +1,7 @@
 from src.add import add
 import numpy as np
 def test_add():
-    assert add(1) == 101
+    assert add(1,100) == 101
 def test_string():
     assert add("fourth","brain") == "fourthbrain"
 def test_array():
