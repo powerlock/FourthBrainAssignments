@@ -127,7 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-<<<<<<< HEAD
-SentimentAnalysis/secrets.py
-=======
->>>>>>> 63bbae0b56b2ee12a6389ef358057896183c65db
