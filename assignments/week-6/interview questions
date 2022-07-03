@@ -1,0 +1,75 @@
+Normalization:
+
+-What is normalization?
+
+Normalization is a data preprocessing technique to make all variables/features having the similar distribution. 
+
+-Why do we need normalization?
+
+When variables/features have different units the number could have big differences, which makes the features with larger numbers weigh more in the model. Fundamentally, this is related to the loss function calculations.
+When variables/features have different distributions, it is hard for the model to find the optimum parameter.
+
+-How does normalization make the model stable?
+
+By doing normalization, i.e. feature scaling, standardization, each feature will have the same distribution with mean value 0. Equal weights will be given for all features. 
+
+-What should be taken care of when we do normalization?
+
+Outliers are the number #1 thing we should take care of before normalization. Without preprocessing, the trained model will be outweighed by outliers.
+With normalization, we could lose important information of the original data, for example units, data distribution.
+We should convert back to the original data format after prediction.
+
+Loss and Optimizer:
+
+-What are loss and optimizer functions?
+Loss functions are functions that measure the cost/error between the predicted value and testing true value. 
+
+Optimizer functions are algorithms/functions that can be used to tune attributes of deep-learning network including weights and parameters, e.g. learning rate,  regularization. It runs to minimize the loss.
+
+-How do they work?
+
+Loss functions: essentially use a mathematical equation to find the difference between predicted value and true value. There are absolute difference, squared absolute difference, mean squared value, cross-entropy loss, etc.
+
+Optimizer: 
+	Randomly initialize the weights. 
+	Calculate the loss.
+	Move to the direction with smaller loss by updating the hyperparamer using backprop 	method.
+	Recalculate the loss and repeat the above procedure.
+	Converge and find the local/global minimum.
+
+Gradient Descent
+
+-What is gradient descent?
+
+Gradient descent is an optimizer to minimize loss finding the local minimum. 
+
+-How does it work?
+
+It initializes at a random value to calculate the loss. Then it updates the weight on a very small scale of X to recalculate the loss. The scale is small enough to be close to the differential calculus value (tangent value). It repeats the steps until the minimum is reached.
+
+Activation Function:
+
+- What is the activation function?
+
+In deep neural network, activation function is a mathematical equation that defines the output based on given input. Different activation functions have been developed to adapt various problems, e.g, Linear, Relu, Sigmoid, Tanh, Leaky-Relu, Softmax.
+
+-What are outputs of activation functions?
+
+Relu: values equal and greater than 0.
+Softmax: it calculates the probability distribution. The sum of the result is 1. Usually it will be the last layer.
+Sigmoid: values between 0 and +1
+Tanh: values between -1 and +1
+
+TPOT and autoML
+
+-What is the TPOT algorithm?
+
+TPOT is an python automated machine learning tool that optimizes machine learning pipelines with generic programming. The goal of TPOT is to automate the building of ML pipelines by combining a flexible expression tree representation of pipelines with stochastic search algorithms such as genetic programming.
+
+-How does it work?
+
+It only requires passing cleaned data then it will automatically search models, features pipelines and optimize parameters.
+
+-What does TPOT stand for?
+
+Tree-based Pipeline Optimization Tool
